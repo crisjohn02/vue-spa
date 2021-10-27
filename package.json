@@ -14,7 +14,7 @@
     "gsap": "^3.8.0",
     "vue": "^3.2.16",
     "vue-router": "^4.0.12",
-    "vue-tailwind": "^2.4.2",
+    "vue-tailwind": "^2.5.0",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
