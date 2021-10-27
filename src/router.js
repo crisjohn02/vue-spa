@@ -6,6 +6,7 @@ import Main from './pages/Main.vue'
 
 
 const Profile = () => import('./pages/Profile.vue')
+const Play = () => import('./pages/Play.vue')
 
 const router = createRouter({
     history: createWebHashHistory(),
@@ -36,6 +37,11 @@ const router = createRouter({
             meta: {
                 requiresAuth: true
             }
+        },
+        {
+            path: '/play',
+            name: 'play',
+            component: Play
         }
     ]
 })
