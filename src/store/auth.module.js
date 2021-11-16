@@ -31,6 +31,18 @@ const actions = {
 			() => {
 				commit('logout')
 				return Promise.resolve()
+			},
+			error => {
+				return AuthService.csrf().then(
+					() => {
+						return AuthService.logout().then(
+							() => {
+								commit('logout')
+								return Promise.resolve()
+							}
+						)
+					}
+				)
 			}
 		)
 		

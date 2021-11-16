@@ -1,6 +1,6 @@
 <template>
 	<Drawer>
-		this is profile
+		this is {{ user.name }}
 	</Drawer>
 </template>
 <script>
@@ -10,6 +10,14 @@
     export default {
     	components: {
     		Drawer,
-    	}
+    	},
+		data() {
+			return {
+				user: {},
+			}
+		},
+		created() {
+			this.user = this.$store.state.auth.user
+		}
     }
 </script>
